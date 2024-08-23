@@ -24,13 +24,7 @@ div
                       | {{ li.text }}
           div(class="right")
             div(class="right-title font-weight-bold mb-2") Нет ответа на ваш вопрос?
-            v-btn(
-              class="text-capitalize font-weight-bold white--text"
-              x-large
-              rounded
-              color="costumBlue" 
-              elevation="0"
-            )
+            a(class="tg-link" href="https://t.me/mi_101_mi")
               font-awesome-icon(
                 icon="fa-brands fa-telegram"
                 class="mr-2 right-icon"
@@ -56,53 +50,6 @@ export default {
             {
               text: "от 20 до 50$, в зависимости от вашей задачи и проекта.",
             },
-            {
-              text: "от 20 до 50$, в зависимости от вашей задачи и проекта.",
-            },
-          ],
-        },
-        {
-          title: "Сколько у нас стоит час?",
-          list: [
-            {
-              text: "от 20 до 50$, в зависимости от вашей задачи и проекта.",
-            },
-            {
-              text: "от 20 до 50$, в зависимости от вашей задачи и проекта.",
-            },
-          ],
-        },
-        {
-          title: "Сколько у нас стоит час?",
-          list: [
-            {
-              text: "от 20 до 50$, в зависимости от вашей задачи и проекта.",
-            },
-            {
-              text: "от 20 до 50$, в зависимости от вашей задачи и проекта.",
-            },
-          ],
-        },
-        {
-          title: "Сколько у нас стоит час?",
-          list: [
-            {
-              text: "от 20 до 50$, в зависимости от вашей задачи и проекта.",
-            },
-            {
-              text: "от 20 до 50$, в зависимости от вашей задачи и проекта.",
-            },
-          ],
-        },
-        {
-          title: "Сколько у нас стоит час?",
-          list: [
-            {
-              text: "от 20 до 50$, в зависимости от вашей задачи и проекта.",
-            },
-            {
-              text: "от 20 до 50$, в зависимости от вашей задачи и проекта.",
-            },
           ],
         },
       ],
@@ -116,6 +63,21 @@ export default {
   overflow: hidden;
   background-color: #ffffff;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tg-link {
+  height: 52px;
+  width: 360px;
+  background-color: var(--v-costumBlue-base);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: white;
+  font-size: 18px;
+  border-radius: 25px;
+  text-decoration: none;
 }
 
 .container {
@@ -191,6 +153,7 @@ ul {
 
     & > *:last-child {
       font-size: 14px !important;
+      width: 300px;
     }
   }
 }

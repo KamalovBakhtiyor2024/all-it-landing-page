@@ -11,38 +11,39 @@ div
           | скоро оператор свяжется с вами 
       div(class="left rounded-xl pa-12" v-if="!send")
         div(class="font-weight-bold text-center text-uppercase mb-6")
-          | Отправте заявку в Telegram
+          | Для получения консультации
           br
-          | наш консультант свяжется с вами
-        v-form(class="text-center" ref="form" v-model="valid" lazy-validation @submit.prevent="submitForm")
-          v-text-field(
-            v-model="username"
-            :rules="telegramUsernameRules"
-            required
-            hide-details
-            solo
-            class="mb-4"
-            label="Telegram username" 
-            class="input"
-            prepend-inner-icon="mdi-account"
-            type="text"
-          )
-          v-text-field(
-            :rules="phoneRules"
-            solo
-            v-model="phone"
-            required
-            label="Номер телефона" 
-            class="input"
-            prepend-inner-icon="mdi-phone"
-            hide-details
-            type="tel"
-          )
-          v-radio-group(v-model="radios" hide-details required :rules="[v => !!v || '']") 
-            v-radio(label="Физическое лицо" value="Физическое лицо")
-            v-radio(label="Компания" value="Компания")
-          v-btn(rounded elevation="0" min-height="52" @click="submitForm" class="white--text font-weight-bold px-16 mt-6" color="costumBlue")
-            | Отправить
+          | напишите нам в Telegram
+        a(class="tg-link" href="https://t.me/mi_101_mi") Перейти
+        //- v-form(class="text-center" ref="form" v-model="valid" lazy-validation @submit.prevent="submitForm")
+        //-   v-text-field(
+        //-     v-model="username"
+        //-     :rules="telegramUsernameRules"
+        //-     required
+        //-     hide-details
+        //-     solo
+        //-     class="mb-4"
+        //-     label="Telegram username" 
+        //-     class="input"
+        //-     prepend-inner-icon="mdi-account"
+        //-     type="text"
+        //-   )
+        //-   v-text-field(
+        //-     :rules="phoneRules"
+        //-     solo
+        //-     v-model="phone"
+        //-     required
+        //-     label="Номер телефона" 
+        //-     class="input"
+        //-     prepend-inner-icon="mdi-phone"
+        //-     hide-details
+        //-     type="tel"
+        //-   )
+        //-   v-radio-group(v-model="radios" hide-details required :rules="[v => !!v || '']") 
+        //-     v-radio(label="Физическое лицо" value="Физическое лицо")
+        //-     v-radio(label="Компания" value="Компания")
+        //-   v-btn(rounded elevation="0" min-height="52" @click="submitForm" class="white--text font-weight-bold px-16 mt-6" color="costumBlue")
+        //-     | Отправить
       div(class="right d-flex align-center justify-center")
         font-awesome-icon(
           icon="fa-brands fa-telegram"
@@ -115,6 +116,21 @@ export default {
 .left {
   box-shadow: var(--shadow-lg);
   max-width: 460px;
+}
+
+.tg-link {
+  background-color: var(--v-costumBlue-base);
+  height: 52px;
+  width: 146px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .right {

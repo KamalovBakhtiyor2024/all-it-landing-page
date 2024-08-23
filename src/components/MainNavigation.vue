@@ -25,7 +25,7 @@ div
                 :class="item.list ? 'category-link pr-2' : null"
               ) {{ $t(item.name) }}
           v-btn(class="text-none font-weight-bold ml-4" elevation="0" rounded color="costumBlue")
-            a(href="https://t.me/it_business_developers" target="_blank" class="white--text text-decoration-none") Telegram {{ $t("channel") }}
+            a(href="https://t.me/KamalovBakhtiyor2024" target="_blank" class="white--text text-decoration-none") Telegram
 </template>
 
 <script>
