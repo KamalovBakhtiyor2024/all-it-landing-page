@@ -5,8 +5,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    token: "6522451194:AAFvdTCC9EkU3cPw3-mExCXQxpuurr50w_E",
-    chat_id: "-1001845333948",
+    // token: "",
+    // chat_id: "",
     reviews: [
       {
         user: {
